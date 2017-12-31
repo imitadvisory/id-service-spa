@@ -1,0 +1,19 @@
+{
+  "name": "id-service-spa",
+  "version": "0.1.1",
+  "description": "SPA based ID service using Auth0 to login users into other services. Apps should send users here for login. SPA will send users back to original site after successful login.",
+  "main": "index.js",
+  "repository": "https://github.com/imitadvisory/id-service-spa",
+  "author": "Bryan Vaz <bryan@imitadvisory.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.9"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --hot --debug --output-pathinfo",
+    "build": "webpack",
+    "lint": "esw webpack.config.* client tools --color",
+    "lint:fix": "esw webpack.config.* client tools --color --fix",
+    "lint:watch": "npm run lint -- --watch"
+  }
+}
